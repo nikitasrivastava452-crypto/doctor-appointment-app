@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - Doctor Appointment System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../styles/patient-register.css">
+</head>
+
+<body>
+    <div class="container registration-container">
+        <div class="row">
+            <div class="col-md-7 col-lg-5 col-xl-4 mx-auto">
+                <div class="registration-card">
+                    <div class="registration-header">
+                        <i class="bi bi-person-plus-fill registration-icon"></i>
+                        <h2>Doctor Registration</h2>
+                        <p>Create your account to view appointments</p>
+                    </div>
+
+                    <form id="registrationForm" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Name <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                                <i class="bi bi-person input-icon"></i>
+                            </div>
+                            <div class="validation-feedback" id="nameFeedback"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <i class="bi bi-envelope input-icon"></i>
+                            </div>
+                            <div class="validation-feedback" id="emailFeedback"></div>
+                            <small class="help-text">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">
+                                Password <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="password" class="form-control" id="password" placeholder="Enter password (min 6 characters)" required minlength="6">
+                                <i class="bi bi-lock input-icon"></i>
+                            </div>
+                            <div class="validation-feedback" id="passwordFeedback"></div>
+                            <small class="help-text">Password must be at least 6 characters long.</small>
+                            <div class="password-strength" id="passwordStrength" style="display: none;">
+                                <div class="strength-bar" id="strengthBar"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialization" class="form-label">
+                                Specialization <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <select class="form-control" id="specialization" required>
+                                    <option value="">Select your specialization</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Dermatology">Dermatology</option>
+                                    <option value="Endocrinology">Endocrinology</option>
+                                    <option value="Gastroenterology">Gastroenterology</option>
+                                    <option value="General Medicine">General Medicine</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Oncology">Oncology</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Psychiatry">Psychiatry</option>
+                                    <option value="Pulmonology">Pulmonology</option>
+                                    <option value="Urology">Urology</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <i class="bi bi-briefcase-medical input-icon"></i>
+                            </div>
+                            <div class="validation-feedback" id="specializationFeedback"></div>
+                            <small class="help-text">Select your medical specialization area.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience" class="form-label">
+                                Experience (Years) <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" class="form-control" id="experience" placeholder="Enter years of experience" required min="0" max="50">
+                                <i class="bi bi-calendar-check input-icon"></i>
+                            </div>
+                            <div class="validation-feedback" id="experienceFeedback"></div>
+                            <small class="help-text">Enter your years of professional experience.</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-register">
+                            <i class="bi bi-person-check me-2"></i>Register
+                        </button>
+                    </form>
+
+                    <div class="login-link">
+                        <p>Already have an account?</p>
+                        <a href="doctor-login.html">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>Login here
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/doctor-register.js"></script>
+</body>
+
+</html>

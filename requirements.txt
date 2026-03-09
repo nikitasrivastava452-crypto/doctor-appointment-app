@@ -1,0 +1,266 @@
+1. Patient Pages
+
+        1.1 Patient Registration Page
+        ------------------------------
+
+        Purpose: Allow a patient to create an account.
+
+        Fields:
+
+        Name (text input)
+
+        Email (text input, validate email format)
+
+        Password (password input, min 6 characters)
+
+        Phone (text input, validate numeric)
+
+        Validation:
+
+        All fields required
+
+        Email format validation
+
+        Password minimum 6 characters
+
+        Phone should contain only digits
+
+        Design / Layout:
+
+        Bootstrap Form inside a card centered on the page
+
+        Form Title: "Patient Registration"
+
+        Responsive layout using col-md-6 offset-md-3
+
+        Submit button with hover effect
+
+        Optional: background image for hero section
+
+        Dynamic Behavior:
+
+        Check if email already exists in backend before registering
+
+        Show success alert after registration
+
+        Redirect to login page
+
+        1.2 Patient Login Page
+        -----------------------
+
+        Purpose: Allow registered Patients to log in.
+
+        Fields:
+
+        Email
+
+        Password
+
+        Action:
+
+        Verify credentials against backend.Patients
+
+        If valid → redirect to Patient Dashboard
+
+        If invalid → show error message
+
+        Design / Layout:
+
+        Similar card layout as registration
+
+        Show “Forgot Password?” link (optional)
+
+        Responsive, mobile-friendly form
+
+        Bootstrap alert for login errors
+
+        Dynamic Behavior:
+
+        After login, save logged-in Patient info in backend as currentPatient
+
+        1.3 Patient Dashboard
+        ----------------------
+
+        Purpose: Central page for the Patient to manage appointments.
+
+        Sections:
+
+        Welcome Message:
+
+        Display Patient name dynamically
+
+        Bootstrap alert or hero section
+
+        Book Appointment Form:
+
+        Fields:
+
+        Select Doctor (dropdown from backend.doctors)
+
+        Service (dropdown from predefined JS array of services)
+
+        Date & Time (input type=date and time)
+
+        Notes (textarea)
+
+        Submit: Save appointment in backend.appointments array with patientId and empty suggestedMedicines array
+
+        View Appointments Table:
+
+        Columns: Doctor, Service, Date/Time, Suggested Medicines
+
+        Bootstrap table with hover effect
+
+        If suggestedMedicines is empty → show “Pending”
+
+        Design / Layout:
+
+        Split layout using Bootstrap Grid:
+
+        Left: Book Appointment Form (col-md-4)
+
+        Right: Appointments Table (col-md-8)
+
+        Cards for each section for better UX
+
+        Dynamic Behavior:
+
+        Form fields (doctor dropdown) are dynamically generated
+
+        Appointments table updates in real-time when new appointment is booked
+
+        Suggested medicines display dynamically
+
+2. Doctor Pages
+
+        2.1 Doctor Registration Page
+        ----------------------------
+
+        Purpose: Allow doctor to create an account.
+
+        Fields:
+
+        Name
+
+        Email
+
+        Password
+
+        Specialization (text input / select dropdown)
+
+        Experience (years, number input)
+
+        Validation:
+
+        All fields required
+
+        Email validation
+
+        Password min 6 characters
+
+        Experience must be numeric
+
+        Action:
+
+        Save doctor object in backend.doctors array
+
+        Design / Layout:
+
+        Similar card form as Patient registration
+
+        Optionally, add a profile picture upload placeholder
+
+        Dynamic Behavior:
+
+        Check for duplicate email
+
+        Success alert → redirect to doctor login
+
+        2.2 Doctor Login Page
+        ---------------------
+
+        Purpose: Allow doctor to log in.
+
+        Fields:
+
+        Email
+
+        Password
+
+        Action:
+
+        Verify credentials against backend.doctors
+
+        If valid → redirect to Doctor Dashboard
+
+        If invalid → show error
+
+        Dynamic Behavior:
+
+        Save currentDoctor info in backend on login
+
+        2.3 Doctor Dashboard
+        --------------------
+
+        Purpose: Allow doctors to view appointments and suggest medicines.
+
+        Sections:
+
+        Appointments Table:
+
+        Columns: Patient Name, Service, Date/Time, Status, Suggested Medicines
+
+        Bootstrap table, dynamic rows based on backend.appointments filtered by doctorId
+
+        Add Suggested Medicines:
+
+        For each appointment row, button “Add Medicines” opens modal
+
+        Modal allows doctor to select medicines from backend.medicines or add new
+
+        Save medicines array to appointment.suggestedMedicines
+
+        Design / Layout:
+
+        Use Bootstrap table with hover effect
+
+        Modals for medicine suggestions
+
+        Cards or alerts for important info (e.g., “No appointments today”)
+
+        Dynamic Behavior:
+
+        Appointments load dynamically
+
+        Medicines added dynamically and saved in backend
+
+        Optional: Filter appointments by date
+
+3. Shared / Additional Pages
+-----------------------------
+    3.1 Medicines Page (Optional)
+    -----------------------------
+
+    Purpose: Manage list of medicines.
+
+    Features:
+
+    Display all medicines in a Bootstrap table
+
+    Add new medicine: Name, Type (Tablet, Capsule, Syrup), Dosage
+
+    Search/filter medicines dynamically using JS
+
+    Design / Layout:
+
+    Table with search box above
+
+    Add new medicine form in modal
+
+    Cards for medicine summary (optional)
+
+    Dynamic Behavior:
+
+    Medicine list fetched from backend.medicines
+
+    New medicines dynamically appended to table

@@ -1,0 +1,306 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 1rem 0;
+}
+
+.registration-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.registration-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-card:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.registration-header h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.registration-header p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.registration-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.form-label .required {
+    color: var(--danger-color);
+    margin-left: 3px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: block;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem 0.6rem 2.25rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.form-control select,
+select.form-control {
+    padding-right: 2.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    z-index: 10;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.form-control:focus ~ .input-icon,
+.form-control:not(:placeholder-shown) ~ .input-icon {
+    color: var(--primary-color);
+}
+
+.validation-feedback {
+    display: none;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    color: var(--danger-color);
+    padding-left: 0;
+    clear: both;
+}
+
+.form-control.is-invalid {
+    border-color: var(--danger-color);
+}
+
+.form-control.is-invalid ~ .input-icon {
+    color: var(--danger-color);
+}
+
+.form-control.is-valid {
+    border-color: var(--success-color);
+}
+
+.form-control.is-valid ~ .input-icon {
+    color: var(--success-color);
+}
+
+.btn-register {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+    border: none;
+    border-radius: 50px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+    background: linear-gradient(135deg, #0056b3 0%, var(--primary-color) 100%);
+}
+
+.btn-register:active {
+    transform: translateY(0);
+}
+
+.btn-register:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.login-link p {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.password-strength {
+    margin-top: 0.35rem;
+    font-size: 0.8rem;
+}
+
+.strength-bar {
+    height: 3px;
+    border-radius: 2px;
+    margin-top: 0.35rem;
+    transition: all 0.3s ease;
+}
+
+.strength-weak {
+    background-color: var(--danger-color);
+    width: 33%;
+}
+
+.strength-medium {
+    background-color: #ffc107;
+    width: 66%;
+}
+
+.strength-strong {
+    background-color: var(--success-color);
+    width: 100%;
+}
+
+.help-text {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    margin-top: 0.4rem;
+    display: block;
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .registration-card {
+        padding: 1.5rem 1.25rem;
+        margin: 0.5rem;
+    }
+
+    .registration-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .registration-header {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-control {
+        padding: 0.6rem 0.8rem 0.6rem 2rem;
+    }
+
+    .input-icon {
+        left: 0.65rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .registration-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .registration-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .registration-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Animation for form appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.registration-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.form-group {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }

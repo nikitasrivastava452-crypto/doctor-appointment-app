@@ -1,0 +1,382 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Welcome Alert Section */
+.welcome-alert {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+    color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.welcome-alert .alert-heading {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.welcome-alert p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.welcome-icon {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Card Styling */
+.appointment-form-card,
+.appointments-table-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.appointment-form-card:hover,
+.appointments-table-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+    color: white;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.card-header h5 {
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.form-label .required {
+    color: var(--danger-color);
+    margin-left: 3px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: block;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem 0.6rem 2.25rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.form-select {
+    padding-left: 2.25rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    z-index: 10;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.form-control:focus ~ .input-icon,
+.form-select:focus ~ .input-icon {
+    color: var(--primary-color);
+}
+
+.validation-feedback {
+    display: none;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    color: var(--danger-color);
+    padding-left: 0;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--danger-color);
+}
+
+.form-control.is-invalid ~ .input-icon,
+.form-select.is-invalid ~ .input-icon {
+    color: var(--danger-color);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: var(--success-color);
+}
+
+.form-control.is-valid ~ .input-icon,
+.form-select.is-valid ~ .input-icon {
+    color: var(--success-color);
+}
+
+textarea.form-control {
+    padding-left: 0.85rem;
+    min-height: 80px;
+    resize: vertical;
+}
+
+textarea.form-control ~ .input-icon {
+    display: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+    background: linear-gradient(135deg, #0056b3 0%, var(--primary-color) 100%);
+    color: white;
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Table Styling */
+.appointments-table {
+    margin-bottom: 0;
+}
+
+.appointments-table thead {
+    background-color: var(--light-bg);
+}
+
+.appointments-table thead th {
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem;
+    font-size: 0.95rem;
+}
+
+.appointments-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.appointments-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.appointments-table tbody tr:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.appointments-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Medicine Badge Styling */
+.medicine-badge {
+    display: inline-block;
+    background-color: var(--success-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 0.2rem;
+    font-weight: 500;
+}
+
+.medicine-pending {
+    background-color: #ffc107;
+    color: #333;
+}
+
+/* Empty State */
+.text-center.text-muted {
+    padding: 3rem 1rem;
+}
+
+.text-center.text-muted i {
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 0 0.5rem;
+    }
+
+    .welcome-alert {
+        padding: 1rem;
+    }
+
+    .welcome-icon {
+        font-size: 2rem;
+    }
+
+    .welcome-alert .alert-heading {
+        font-size: 1.25rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .appointments-table thead th,
+    .appointments-table tbody td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 0.5rem 0.75rem 0.5rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    .input-icon {
+        left: 0.65rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 1rem 0;
+    }
+
+    .welcome-alert {
+        margin-bottom: 1rem;
+    }
+
+    .welcome-alert .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-icon {
+        margin-bottom: 0.5rem;
+        margin-right: 0 !important;
+    }
+
+    .card-header h5 {
+        font-size: 1rem;
+    }
+
+    .appointments-table {
+        font-size: 0.8rem;
+    }
+
+    .appointments-table thead th,
+    .appointments-table tbody td {
+        padding: 0.5rem 0.25rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.appointment-form-card,
+.appointments-table-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.appointments-table-card {
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+

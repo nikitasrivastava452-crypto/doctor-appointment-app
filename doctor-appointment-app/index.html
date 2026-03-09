@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/index.css"/>
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-hospital"></i> Doctor Appointment System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer-registration.html">Customer Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer-login.html">Customer Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctor-registration.html">Doctor Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctor-login.html">Doctor Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1><i class="bi bi-heart-pulse"></i> Welcome to Doctor Appointment System</h1>
+                    <p class="lead">Book appointments with expert doctors and manage your healthcare needs effortlessly</p>
+                    <div class="mt-4">
+                        <a href="#user-types" class="btn btn-light btn-custom me-3">
+                            <i class="bi bi-arrow-down-circle"></i> Get Started
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-custom">
+                            <i class="bi bi-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Type Selection -->
+    <section id="user-types" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Choose Your Role</h2>
+            <div class="row g-4">
+                <!-- Customer Card -->
+                <div class="col-md-6">
+                    <div class="user-type-card">
+                        <i class="bi bi-person-circle user-icon"></i>
+                        <h3 class="mb-3">I'm a Patient</h3>
+                        <p class="text-muted mb-4">Book appointments, view your medical history, and receive medicine suggestions from your doctor.</p>
+                        <div class="d-grid gap-2">
+                            <a href="./views/patients/patient-register.html" class="btn btn-primary btn-lg">
+                                <i class="bi bi-person-plus"></i> Register as Patient
+                            </a>
+                            <a href="./views/patients/patient-login.html" class="btn btn-outline-primary">
+                                <i class="bi bi-box-arrow-in-right"></i> Patient Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Card -->
+                <div class="col-md-6">
+                    <div class="user-type-card">
+                        <i class="bi bi-briefcase-medical user-icon"></i>
+                        <h3 class="mb-3">I'm a Doctor</h3>
+                        <p class="text-muted mb-4">Manage appointments, view patient details, and suggest medicines for your patients.</p>
+                        <div class="d-grid gap-2">
+                            <a href="./views/doctors/doctor-register.html" class="btn btn-success btn-lg">
+                                <i class="bi bi-person-plus"></i> Register as Doctor
+                            </a>
+                            <a href="./views/doctors/doctor-login.html" class="btn btn-outline-success">
+                                <i class="bi bi-box-arrow-in-right"></i> Doctor Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="bi bi-calendar-check feature-icon"></i>
+                        <h4>Easy Booking</h4>
+                        <p class="text-muted">Book appointments with your preferred doctor in just a few clicks. Choose date, time, and service conveniently.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="bi bi-shield-check feature-icon"></i>
+                        <h4>Secure & Safe</h4>
+                        <p class="text-muted">Your personal information and medical data are protected with secure authentication and data management.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="bi bi-capsule feature-icon"></i>
+                        <h4>Medicine Management</h4>
+                        <p class="text-muted">Doctors can suggest medicines directly through the system, and patients can view all recommendations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="bi bi-clock-history feature-icon"></i>
+                        <h4>24/7 Access</h4>
+                        <p class="text-muted">Access your appointments and medical information anytime, anywhere from any device.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="bi bi-people feature-icon"></i>
+                        <h4>Expert Doctors</h4>
+                        <p class="text-muted">Connect with qualified doctors from various specializations with years of experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="bi bi-bell feature-icon"></i>
+                        <h4>Real-time Updates</h4>
+                        <p class="text-muted">Get instant notifications about your appointments and medicine suggestions from doctors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2024 Doctor Appointment System. All rights reserved.</p>
+            <p class="mb-0">
+                <i class="bi bi-envelope"></i> support@doctorappointment.com | 
+                <i class="bi bi-telephone"></i> +1 (555) 123-4567
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
