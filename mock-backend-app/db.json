@@ -1,0 +1,241 @@
+{
+  "users": [
+    {
+      "email": "aarav.sharma@example.com",
+      "password": "$2a$10$LYikLtVLEYe5PUWcBGrTeew/EH72kPu.tCen8OBbNqXeVVyxhlCU2",
+      "name": "Aarav Sharma",
+      "age": 25,
+      "createdAt": "2025-12-09T10:00:00Z",
+      "id": 1
+    },
+    {
+      "email": "allu.durga.prasad@example.com",
+      "password": "$2a$10$SarWzTXXHqr30nUOhnUVcOezoMxFwF3cfnnFCP/V2lYMMi5.zgPau",
+      "name": "Allu Durga Prasad",
+      "age": 22,
+      "id": 2
+    },
+    {
+      "email": "naveen.j@gmail.com",
+      "password": "$2a$10$usx5HpbhbC5wcEAe.FtpXe85yx6HdyTORbdDHQ3SJeLeD1Pwk5vVC",
+      "name": "Naveen",
+      "phone": 9032345245,
+      "id": 3
+    },
+    {
+      "email": "anvesh.reddy@gmail.com",
+      "password": "$2a$10$cxjNqLdWrvpxF5uPcf.PkOz0Ozo9WLzEo2FbLQHbK5Lkhy6DGMTeC",
+      "name": "Anvesh Reddy",
+      "phone": "9032345245",
+      "id": 4
+    },
+    {
+      "email": "prabhu.kumar@gmail.com",
+      "password": "$2a$10$qGR7jyxQBaHHXj8mH5tMeOIQsWjG9VU8Rm8WxlyvGTu4WBfltJZ2m",
+      "name": "Prabhu Kumar",
+      "phone": "9032345245",
+      "id": 5
+    },
+    {
+      "email": "m.vaishnavi@gmail.com",
+      "password": "$2a$10$zE05YvoiuSWG1Tl/9R/p2.Xt/hQvaPccm3OGcflB5mXxvl2jSE9jG",
+      "name": "M Vaishnavi",
+      "phone": "9032345245",
+      "id": 6
+    },
+    {
+      "email": "nandu.sharath@gmail.com",
+      "password": "$2a$10$uFGbE2bbAzYLDGOyzoVleuG0fkgJsy9h/BTKPiLjGc10pDwMxoJXG",
+      "name": "Nandu Sharath",
+      "phone": "9032345245",
+      "id": 7
+    },
+    {
+      "email": "venkat.varshith@gmail.com",
+      "password": "$2a$10$w9aU4fJ/d1o4TWSK3iT2CeFwbrmalelBe6jx5eY5.Ev.S2Achx6s.",
+      "name": "Venkat Varshith",
+      "phone": "9032345245",
+      "id": 8
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Rahul Mehta",
+      "position": "Software Engineer",
+      "salary": 60000,
+      "createdAt": "2025-12-09T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Sneha Gupta",
+      "position": "Project Manager",
+      "salary": 85000,
+      "createdAt": "2025-12-09T10:05:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Arjun Rao",
+      "position": "UI/UX Designer",
+      "salary": 55000,
+      "createdAt": "2025-12-09T10:10:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Nisha Reddy",
+      "position": "QA Engineer",
+      "salary": 50000,
+      "createdAt": "2025-12-09T10:15:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Karan Patel",
+      "position": "DevOps Engineer",
+      "salary": 70000,
+      "createdAt": "2025-12-09T10:20:00Z"
+    },
+    {
+      "name": "Prashanth",
+      "email": "meghana.y@gmail.com",
+      "password": "Test@!23",
+      "pan": "ERUIK8908H",
+      "aadhaar": "890512347890",
+      "id": 6
+    }
+  ],
+  "orders": [],
+  "products": [],
+  "cars": [
+    {
+      "id": 3,
+      "brand": "Tesla",
+      "model": "Model 3",
+      "year": 2023,
+      "price": 42000,
+      "color": "White",
+      "fuelType": "Electric",
+      "image": "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg",
+      "createdAt": "2025-12-10T10:25:00Z"
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2022,
+      "price": 61000,
+      "color": "Black",
+      "fuelType": "Diesel",
+      "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg",
+      "createdAt": "2025-12-10T09:30:00Z"
+    },
+    {
+      "model": "C-Class",
+      "brand": "Mercedes-Benz",
+      "year": "2024",
+      "price": "45000",
+      "color": "Orange",
+      "fuelType": "Diesel",
+      "image": "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "id": 6,
+      "createdAt": "2025-12-10T10:30:00Z"
+    },
+    {
+      "model": "Mustang",
+      "brand": "Ford",
+      "year": "2022",
+      "price": "55000",
+      "color": "Yellow",
+      "fuelType": "Petrol",
+      "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "id": 7,
+      "createdAt": "2025-08-11T10:30:00Z"
+    },
+    {
+      "model": "Model 3",
+      "brand": "Tesla",
+      "year": "2020",
+      "price": "42000",
+      "color": "Red",
+      "fuelType": "Petrol",
+      "image": "https://images.pexels.com/photos/11139504/pexels-photo-11139504.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "createdAt": "2025-12-12T06:15:03.652Z",
+      "id": 8
+    },
+    {
+      "model": "Huracan",
+      "brand": "Lamborghini",
+      "year": "2021",
+      "price": "42000",
+      "color": "Black",
+      "fuelType": "Diesel",
+      "image": "https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "createdAt": "2025-12-11T06:24:52.168Z",
+      "id": 9
+    },
+    {
+      "model": "911 Carrera",
+      "brand": "Porsche",
+      "year": "2020",
+      "price": "42000",
+      "color": "Orange",
+      "fuelType": "Diesel",
+      "image": "https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "createdAt": "2025-12-11T06:31:12.513Z",
+      "id": 10
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "doctorId": "1",
+      "patientId": "3",
+      "selectedService": "Blood Test",
+      "appointmentDate": "2026-01-17",
+      "appointmentTime": "12:07",
+      "appointmentNotes": "NA",
+      "id": 4
+    }
+  ],
+  "doctors": [
+    {
+      "name": "Dr. Arjun Mehta",
+      "email": "arjun.mehta@example.com",
+      "password": "Doctor@123",
+      "specialization": "Cardiologist",
+      "experience": 8,
+      "id": 1
+    },
+    {
+      "name": "Dr. Aarav Kumar",
+      "email": "aarav.kumar@example.com",
+      "password": "DocPass123",
+      "specialization": "Neurologist",
+      "experience": 10,
+      "id": 2
+    },
+    {
+      "name": "Dr. Ananya Patel",
+      "email": "ananya.patel@example.com",
+      "password": "DocPass456",
+      "specialization": "Pediatrician",
+      "experience": 6,
+      "id": 3
+    },
+    {
+      "name": "Dr. Vikram Joshi",
+      "email": "vikram.joshi@example.com",
+      "password": "DocPass789",
+      "specialization": "Orthopedic",
+      "experience": 12,
+      "id": 4
+    }
+  ]
+}
